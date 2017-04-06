@@ -21,7 +21,7 @@ function getdir(){
 }
 
 echo "Install nightmare"
-cd ../..
+cd ./test
 npm install nightmare
 echo "Done"
 
