@@ -20,12 +20,7 @@ function getdir(){
     done
 }
 
-echo "Install nightmare"
-cd ./test
-npm install nightmare
-echo "Done"
-
-root_dir="./unit"
+root_dir="./test/unit"
 echo Running unit test...
 for filename in `getdir $root_dir`
 do
@@ -34,7 +29,7 @@ do
 done
 echo Running unit test, done.
 
-root_dir="./e2e"
+root_dir="./test/e2e"
 echo Running end-to-end test...
 for filename in `getdir $root_dir`
 do
