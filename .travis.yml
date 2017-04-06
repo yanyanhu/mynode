@@ -9,6 +9,20 @@ branches:
 services:
     - docker
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - xvfb
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - xvfb
+
 before_script:
     - echo "Before test"
 script:
