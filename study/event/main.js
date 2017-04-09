@@ -29,6 +29,8 @@ console.log(numListeners1, numListeners2)
 
 eventEmitter.emit("connection")
 
+console.log("======================")
+
 setTimeout(function() {
     console.log("Remove one listener on data_received")
     eventEmitter.removeListener("data_received", data_receiver2)
@@ -38,3 +40,4 @@ setTimeout(function() {
     eventEmitter.emit("connection")
 }, 10000)
 
+console.log("-----------------------")
