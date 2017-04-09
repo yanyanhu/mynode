@@ -31,7 +31,7 @@ eventEmitter.emit("connection")
 
 console.log("======================")
 
-setTimeout(function() {
+var t = setTimeout(function() {
     console.log("Remove one listener on data_received")
     eventEmitter.removeListener("data_received", data_receiver2)
     numListeners1 = events.EventEmitter.listenerCount(eventEmitter, "connection")
@@ -40,4 +40,11 @@ setTimeout(function() {
     eventEmitter.emit("connection")
 }, 10000)
 
+//clearTimeout(t)
+
+eventEmitter.emit("data_received", 'UserB')
 console.log("-----------------------")
+
+//while (true) {
+//    1 + 1
+//}
