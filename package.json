@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "sleep": "^5.1.1"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "nightmare": "^2.10.0",
-    "rewire": "^2.5.2"
+    "rewire": "^2.5.2",
+    "sinon": "^2.1.0"
   }
 }
