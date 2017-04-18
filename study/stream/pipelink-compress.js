@@ -1,8 +1,9 @@
 var fs = require("fs");
-var zlib = require('zlib');
+var zlib = require("zlib");
 
-fs.createReadStream('input.txt')
+fs
+  .createReadStream("input.txt")
   .pipe(zlib.createGzip())
-  .pipe(fs.createWriteStream('input.txt.gz'));
-  
-console.log('file compress, done');
+  .pipe(fs.createWriteStream("input.txt.gz"));
+
+console.log("file compress, done");

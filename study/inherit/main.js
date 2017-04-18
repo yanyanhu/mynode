@@ -1,33 +1,32 @@
-var util = require('util')
+var util = require("util");
 
+function Base() {
+  this.name = "base";
+  this.base = 1991;
+  this.sayHello = function() {
+    console.log("Hello " + this.name);
+  };
+}
 
-function Base() { 
-    this.name = 'base'
-    this.base = 1991
-    this.sayHello = function() { 
-        console.log('Hello ' + this.name)
-    }
-}
- 
-Base.prototype.showName = function() { 
-    console.log(this.name)
-}
- 
-function Sub() { 
-    this.name = 'sub'
-}
- 
-util.inherits(Sub, Base)
-var objBase = new Base()
-objBase.showName()
-objBase.sayHello()
-console.log(objBase)
+Base.prototype.showName = function() {
+  console.log(this.name);
+};
 
-var objSub = new Sub()
-objSub.showName()
-objSub.name
-console.log('==========')
-objSub.base
+function Sub() {
+  this.name = "sub";
+}
+
+util.inherits(Sub, Base);
+var objBase = new Base();
+objBase.showName();
+objBase.sayHello();
+console.log(objBase);
+
+var objSub = new Sub();
+objSub.showName();
+objSub.name;
+console.log("==========");
+objSub.base;
 //objSub.sayHello()
-console.log('==========')
-console.log(objSub)
+console.log("==========");
+console.log(objSub);

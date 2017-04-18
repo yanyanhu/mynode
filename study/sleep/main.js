@@ -1,8 +1,7 @@
-var sleep = require('sleep');
+var sleep = require("sleep");
 
+console.log("=====start to sleep=====");
 
-console.log("=====start to sleep=====")
+sleep.sleep(3);
 
-sleep.sleep(3)
-
-console.log("=====sleep end=====")
+console.log("=====sleep end=====");

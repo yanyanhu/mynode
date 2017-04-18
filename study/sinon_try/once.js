@@ -1,12 +1,12 @@
 function once(fn) {
-    var returnValue, called = false;
-    return function () {
-        if (!called) {
-            called = true;
-            returnValue = fn.apply(this, arguments)
-        }
-        return returnValue
+  var returnValue, called = false;
+  return function() {
+    if (!called) {
+      called = true;
+      returnValue = fn.apply(this, arguments);
     }
+    return returnValue;
+  };
 }
 
-exports.once = once
+exports.once = once;
