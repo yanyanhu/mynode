@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "import",
+    "flowtype",
+    "flowtype-errors",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": "off",
+    "valid-jsdoc": [
+      "error",
+      {
+        "prefer": {
+          "arg": "param",
+          "return": " returns"
+        },
+        "requireReturnType": false,
+        "requireReturn": false
+      }
+    ],
+    "consistent-return": "off",
+    "func-names": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-underscore-dangle": ["warn", { "allow": ["_id", "_rev", "_path"] }],
+    "handle-callback-err": "error",
+    "no-unused-vars": ["warn", { "vars": "local", "args": "none" }],
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "prettier/prettier": ["error", { "tabWidth": 4 }],
+    "one-var": ["error", { "initialized": "never", "uninitialized": "always" }],
+    "flowtype-errors/show-errors": 2
+  }
+}
