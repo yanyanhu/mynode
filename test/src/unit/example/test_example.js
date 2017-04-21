@@ -26,7 +26,7 @@ describe("File", function() {
             console.log("Before, readFile");
         });
         it("Should read tmp without error", function(done) {
-            fs.readFile("test/unit/example/tmp", function(err) {
+            fs.readFile("test/src/unit/example/tmp", function(err) {
                 if (err) done(err);
                 else done();
             });

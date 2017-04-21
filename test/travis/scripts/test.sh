@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 
 echo "docker test starts..."
 docker pull busybox
@@ -23,7 +24,7 @@ function getdir(){
 }
 
 
-root_dir="./test/e2e"
+root_dir="./test/src/e2e"
 echo Running end-to-end test...
 for filename in `getdir $root_dir`
 do
