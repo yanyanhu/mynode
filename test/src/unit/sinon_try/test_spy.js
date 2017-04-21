@@ -1,6 +1,6 @@
 var assert = require("assert");
 var sinon = require("sinon");
-var once = require("study/sinon_try/once.js").once;
+const once = require("../../../../study/sinon_try/once.js").once;
 
 describe("sinon", function() {
     describe("spy", function() {

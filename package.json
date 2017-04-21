@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "NODE_PATH=. mocha test --recursive --compilers js:babel-register --require babel-polyfill",
+    "test": "webpack --config webpack.test.js && NODE_PATH=. mocha test/dist --recursive --compilers js:babel-register --require babel-polyfill",
+    "test-build": "webpack --config webpack.test.js",
     "lint": "eslint *"
   },
   "dependencies": {
