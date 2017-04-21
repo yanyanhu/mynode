@@ -4,7 +4,6 @@
     "node": true
   },
   "extends": [
-    "airbnb",
     "plugin:flowtype/recommended",
     "prettier"
   ],
