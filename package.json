@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "webpack --config webpack.test.js && NODE_PATH=. mocha test/dist --recursive --compilers js:babel-register --require babel-polyfill",
+    "test": "webpack --config webpack.test.js && export NODE_PATH=. && xvfb-run --server-args='-screen 0 1024x768x24' mocha test/dist --recursive --compilers js:babel-register --require babel-polyfill",
     "test-build": "webpack --config webpack.test.js",
     "lint": "eslint *"
   },

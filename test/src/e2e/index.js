@@ -1,21 +1,8 @@
-var Nightmare = require("nightmare");
-var nightmare = Nightmare({ show: true });
+import { describe } from "mocha";
 
-//var nv = Nightmare.version;
-//console.log(nv);
-
-nightmare
-    .goto("http://yahoo.com")
-    .type('form[action*="/search"] [name=p]', "github nightmare")
-    .click('form[action*="/search"] [type=submit]')
-    .wait("#main")
-    .evaluate(function() {
-        return document.querySelector("#main .searchCenterMiddle li a").href;
-    })
-    .end()
-    .then(function(result) {
-        console.log(result);
-    })
-    .catch(function(error) {
-        console.error("Search failed:", error);
-    });
+function requireAll(r) {
+    r.keys().forEach(r);
+}
+describe("***E2E TEST***", function() {
+    requireAll(require.context(".", true, /\.js$/));
+});
