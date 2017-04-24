@@ -1,4 +1,5 @@
 import { describe, it } from "mocha";
+import assert from "assert";
 import Nightmare from "nightmare";
 
 //var nv = Nightmare.version;
@@ -7,9 +8,9 @@ const testURL = "http://yahoo.com";
 
 describe("nightmare-try", function() {
     this.timeout(60000);
-    it("Search for nightmare github address", async function() {
+    it("Search for nightmare github address", function(done) {
         const nightmare = Nightmare({ show: true });
-        await nightmare
+        nightmare
             .goto(testURL)
             .type('form[action*="/search"] [name=p]', "github nightmare")
             .click('form[action*="/search"] [type=submit]')
@@ -23,9 +24,11 @@ describe("nightmare-try", function() {
             .then(function(result) {
                 console.log(result);
                 assert.equal(result, "https://github.com/segmentio/nightmare");
+                done();
             })
             .catch(function(error) {
                 console.error("Search failed:", error);
+                done(error);
             });
     });
 });
