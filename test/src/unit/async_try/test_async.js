@@ -2,7 +2,7 @@ import { describe, it } from "mocha";
 import assert from "assert";
 
 describe("Try mocha async test", function() {
-    it("This is a negative test.", function(done) {
+    it.skip("This is a negative test.", function(done) {
         const testPromise = new Promise(function(resolve, reject) {
             setTimeout(function() {
                 resolve("Hello!");
@@ -19,7 +19,7 @@ describe("Try mocha async test", function() {
             });
     });
 
-    it("This is a negative test as well.", function() {
+    it.skip("This is a negative test as well.", function() {
         const testPromise = new Promise(function(resolve, reject) {
             setTimeout(function() {
                 resolve("Hello!");
@@ -31,7 +31,7 @@ describe("Try mocha async test", function() {
         });
     });
 
-    it("This is another negative test.", async function() {
+    it.skip("This is another negative test.", async function() {
         const testPromise = new Promise(function(resolve, reject) {
             setTimeout(function() {
                 resolve("Hello!");
