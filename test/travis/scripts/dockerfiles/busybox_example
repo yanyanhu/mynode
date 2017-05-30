@@ -1,0 +1,7 @@
+FROM busybox:latest
+
+MAINTAINER "Yanyan Hu <yanyanhu@cn.ibm.com>"
+
+RUN echo "This is an example for building docker image"
+
+ENTRYPOINT ["/bin/sh"]
