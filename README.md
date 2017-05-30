@@ -1,3 +1,3 @@
 # mynode
 
-This is a test repo for nodejs.
+Test repo for nodejs.
