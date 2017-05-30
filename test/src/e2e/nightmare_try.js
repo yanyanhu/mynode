@@ -8,7 +8,7 @@ const testURL = "http://yahoo.com";
 
 describe("nightmare-try", function() {
     this.timeout(60000);
-    it("Search for nightmare github address", function(done) {
+    it.skip("Search for nightmare github address", function(done) {
         const nightmare = Nightmare({ show: true });
         nightmare
             .goto(testURL)
