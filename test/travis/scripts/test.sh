@@ -11,7 +11,7 @@ docker rm -f test-busybox
 echo "docker test finished."
 
 echo "build busybox image"
-docker build -f test/travis/scripts/dockerfiles/busybox_example -t busybox:test .
+docker build -f test/travis/dockerfiles/busybox_example -t busybox:test .
 docker tag busybox:test registry.ng.bluemix.net/testblue/busybox:test
 
 # Setup bluemix containers service env
@@ -28,3 +28,6 @@ sudo tar -zxf Bluemix_CLI_0.5.4_amd64.tar.gz
 
 cd Bluemix_CLI
 sudo ./install_bluemix_cli
+
+# Install IBM containers plugin
+bluemix plugin install IBM-Containers -r Bluemix
